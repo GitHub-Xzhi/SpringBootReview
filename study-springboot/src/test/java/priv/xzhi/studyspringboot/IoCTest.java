@@ -5,6 +5,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 import priv.xzhi.studyspringboot.bean.User;
 import priv.xzhi.studyspringboot.bean.UserComponent;
+import priv.xzhi.studyspringboot.bean.definition.impl.BussinessPerson;
 import priv.xzhi.studyspringboot.config.AppConfig;
 import priv.xzhi.studyspringboot.service.UserService;
 
@@ -21,7 +22,13 @@ public class IoCTest
         System.out.println(user.toString());
         UserComponent userComponent = context.getBean(UserComponent.class);
         System.out.println(userComponent.toString());
-        UserService userService = context.getBean(UserService.class);
-        userService.testComponentFilte();
+        try {
+            UserService userService = context.getBean(UserService.class);
+            userService.testComponentFilte();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+		BussinessPerson bussinessPerson = context.getBean(BussinessPerson.class);
+		bussinessPerson.service();
     }
 }
