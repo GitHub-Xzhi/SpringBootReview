@@ -1,9 +1,14 @@
 package priv.xzhi.studyspringboot.config;
 
+import org.apache.commons.dbcp2.BasicDataSourceFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.FilterType;
+
+import java.util.Properties;
+
+import javax.sql.DataSource;
 
 import priv.xzhi.studyspringboot.bean.User;
 import priv.xzhi.studyspringboot.service.UserService;
@@ -25,5 +30,21 @@ public class AppConfig
         user.setName("测试");
         user.setNote("啦啦");
         return user;
+    }
+
+    @Bean(name = "dataSource")
+    public DataSource getDataSource() {
+        Properties properties = new Properties();
+        properties.setProperty("driver", "com.mysql.jdbc.Driver");
+        properties.setProperty("url", "jdbc:mysql://172.168.63.232:3307/test");
+        properties.setProperty("username", "root");
+        properties.setProperty("password", "root");
+        DataSource dataSource = null;
+        try {
+            dataSource = BasicDataSourceFactory.createDataSource(properties);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return dataSource;
     }
 }
