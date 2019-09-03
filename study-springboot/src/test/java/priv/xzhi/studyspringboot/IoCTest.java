@@ -6,6 +6,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import priv.xzhi.studyspringboot.bean.User;
 import priv.xzhi.studyspringboot.bean.UserComponent;
 import priv.xzhi.studyspringboot.bean.definition.impl.BussinessPerson;
+import priv.xzhi.studyspringboot.bean.definition.impl.BussinessPersonLazyInit;
 import priv.xzhi.studyspringboot.config.AppConfig;
 import priv.xzhi.studyspringboot.service.UserService;
 
@@ -30,5 +31,7 @@ public class IoCTest
         }
 		BussinessPerson bussinessPerson = context.getBean(BussinessPerson.class);
 		bussinessPerson.service();
+        BussinessPersonLazyInit bussinessPersonLazyInit = context.getBean(BussinessPersonLazyInit.class);
+        bussinessPersonLazyInit.service();
     }
 }
