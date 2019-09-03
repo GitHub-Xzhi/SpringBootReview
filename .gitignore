@@ -144,3 +144,5 @@ fabric.properties
 # Editor-based Rest Client
 .idea/httpRequests
 
+# git单个仓库的用户配置
+er.name
