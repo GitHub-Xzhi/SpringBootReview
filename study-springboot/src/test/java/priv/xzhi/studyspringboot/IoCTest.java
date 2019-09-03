@@ -4,6 +4,7 @@ import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import priv.xzhi.studyspringboot.bean.DataBaseProperties;
 import priv.xzhi.studyspringboot.bean.User;
 import priv.xzhi.studyspringboot.bean.UserComponent;
 import priv.xzhi.studyspringboot.bean.definition.impl.BussinessPerson;
@@ -34,7 +35,9 @@ public class IoCTest
 		bussinessPerson.service();
         BussinessPersonLazyInit bussinessPersonLazyInit = ctx.getBean(BussinessPersonLazyInit.class);
         bussinessPersonLazyInit.service();
-        
+
+        DataBaseProperties dataBaseProperties = ctx.getBean(DataBaseProperties.class);
+        System.out.println(dataBaseProperties.getDriverName());
     }
 
     /**

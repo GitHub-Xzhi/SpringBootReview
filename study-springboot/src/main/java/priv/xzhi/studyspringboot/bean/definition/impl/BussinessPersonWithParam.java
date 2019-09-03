@@ -14,7 +14,7 @@ import priv.xzhi.studyspringboot.bean.definition.Person;
 @Component
 public class BussinessPersonWithParam implements Person {
 
-	private Animal animal = null;
+	private Animal animal;
 
 	public BussinessPersonWithParam(@Autowired @Qualifier("dog") Animal animal) {
 		this.animal = animal;
