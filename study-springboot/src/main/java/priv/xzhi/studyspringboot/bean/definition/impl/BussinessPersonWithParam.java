@@ -9,7 +9,7 @@ import priv.xzhi.studyspringboot.bean.definition.Person;
 
 /**
  * Desc:带有参数的构造方法类的装配
- * Created by 陈冠志 on 2019-09-02 11:05.
+ * Created by Xzhi on 2019-09-02 11:05.
  */
 @Component
 public class BussinessPersonWithParam implements Person {

@@ -2,7 +2,7 @@ package priv.xzhi.studyspringboot.bean.definition;
 
 /**
  * Desc: ${DESC}
- * Created by 陈冠志 on 2019-09-02 10:54.
+ * Created by Xzhi on 2019-09-02 10:54.
  */
 
 public interface Person {

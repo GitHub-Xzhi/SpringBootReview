@@ -9,7 +9,7 @@ import priv.xzhi.studyspringboot.bean.definition.Person;
 
 /**
  * Desc:延迟初始化
- * Created by 陈冠志 on 2019-09-02 11:05.
+ * Created by Xzhi on 2019-09-02 11:05.
  */
 @Component
 public class BussinessPersonLazyInit implements Person {

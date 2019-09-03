@@ -6,7 +6,7 @@ import priv.xzhi.studyspringboot.bean.definition.Animal;
 
 /**
  * Desc:
- * Created by 陈冠志 on 2019-09-02 11:10.
+ * Created by Xzhi on 2019-09-02 11:10.
  */
 @Component
 public class Dog implements Animal {
