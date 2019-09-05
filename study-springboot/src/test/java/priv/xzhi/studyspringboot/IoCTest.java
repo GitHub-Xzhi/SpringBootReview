@@ -5,6 +5,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import priv.xzhi.studyspringboot.bean.DataBaseProperties;
+import priv.xzhi.studyspringboot.bean.ScopeBean;
 import priv.xzhi.studyspringboot.bean.User;
 import priv.xzhi.studyspringboot.bean.UserComponent;
 import priv.xzhi.studyspringboot.bean.definition.impl.BussinessPerson;
@@ -61,5 +62,16 @@ public class IoCTest
         BussinessPersonLazyInit bussinessPersonLazyInit = ctx.getBean(BussinessPersonLazyInit.class);
         bussinessPersonLazyInit.service();
         ctx.close();
+    }
+
+    /**
+     * 测试作用域
+     */
+    @Test
+    public void testScope() {
+        AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(AppConfig.class);
+        ScopeBean bean1 = ctx.getBean(ScopeBean.class);
+        ScopeBean bean2 = ctx.getBean(ScopeBean.class);
+        System.out.println(bean1 == bean2);
     }
 }
