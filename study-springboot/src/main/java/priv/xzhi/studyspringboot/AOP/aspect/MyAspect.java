@@ -1,8 +1,10 @@
 package priv.xzhi.studyspringboot.AOP.aspect;
 
+import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.AfterThrowing;
+import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
@@ -39,5 +41,16 @@ public class MyAspect {
 	@AfterThrowing("pointCut()")
 	public void afterThrowing() {
         System.out.println("afterThrowing ……");
+	}
+
+    /**
+     * 环绕通知
+     */
+    @Around("pointCut()")
+	public void around(ProceedingJoinPoint joinPoint) throws Throwable{
+        System.out.println("around before ……");
+        // 回调目标对象的原有方法
+        joinPoint.proceed();
+        System.out.println("around after ……");
 	}
 }
