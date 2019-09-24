@@ -7,7 +7,11 @@ import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.DeclareParents;
 import org.aspectj.lang.annotation.Pointcut;
+
+import priv.xzhi.studyspringboot.AOP.aspect.validator.UserValidator;
+import priv.xzhi.studyspringboot.AOP.aspect.validator.impl.UserValidatorImpl;
 
 /**
  * Desc: 定义切面
@@ -15,6 +19,15 @@ import org.aspectj.lang.annotation.Pointcut;
  */
 @Aspect
 public class MyAspect {
+
+	/**
+	 * @ DeclareParents 作用：引入新的类来增强服务 <br/>
+	 * value：指向你要增强功能的目标对象，这里要增强UserServiceImpl对象 <br/>
+	 * defaultImpl：引入增强功能的类
+	 */
+	@DeclareParents(value = "priv.xzhi.studyspringboot.AOP.aspect.service.impl.UserServiceImpl",
+			defaultImpl = UserValidatorImpl.class)
+	public UserValidator userValidator;
 
 	/**
 	 * 定义切点.<br/>
