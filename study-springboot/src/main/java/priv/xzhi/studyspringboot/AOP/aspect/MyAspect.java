@@ -70,8 +70,8 @@ public class MyAspect {
 	}
 
 	/**
-	 * 通知获取参数：
-	 * 非环绕通知：可以使用一个连接点（JoinPoint）类型的参数，通过它也可以获取参数。
+	 * 通知获取参数：<br/>
+	 * 非环绕通知：可以使用一个连接点（JoinPoint）类型的参数，通过它也可以获取参数。<br/>
 	 * 环绕通知：可以使用ProceedingJoinPoint类型的参数。
 	 */
 	@Before("pointCut() && args(user)")

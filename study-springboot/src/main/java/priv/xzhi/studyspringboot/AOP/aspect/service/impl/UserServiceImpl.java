@@ -20,4 +20,9 @@ public class UserServiceImpl implements UserService {
         System.out.print("\tusername = " + user.getUserName());
         System.out.print("\tnote = " + user.getNote() +"\n");
     }
+
+    @Override
+    public void manyAspects() {
+        System.out.println("测试多个切面顺序");
+    }
 }

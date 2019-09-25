@@ -44,4 +44,10 @@ public class UserController {
         }
         return user;
     }
+
+    @GetMapping("/manyAspects")
+    public String manyAspects() {
+        userService.manyAspects();
+        return "manyAspects";
+    }
 }

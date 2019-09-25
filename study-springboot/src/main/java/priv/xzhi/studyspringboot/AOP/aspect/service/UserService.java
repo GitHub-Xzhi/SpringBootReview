@@ -8,4 +8,6 @@ import priv.xzhi.studyspringboot.AOP.bean.User;
  */
 public interface UserService {
     void printUser(User user);
+
+    void manyAspects();
 }

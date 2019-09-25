@@ -19,7 +19,7 @@ import priv.xzhi.studyspringboot.IoC.condition.DatabaseConditional;
  * Created by Xzhi on 2019-09-02 0:07.
  */
 @Configuration
-@ComponentScan(basePackages = "priv.xzhi.studyspringboot.*")
+@ComponentScan(basePackages = "priv.xzhi.studyspringboot.IoC.*")
 //@ComponentScan(basePackages = "priv.xzhi.studyspringboot.*", lazyInit = true)
 //@ComponentScan(basePackageClasses = UserComponent.class)
 //@ComponentScan(value = "priv.xzhi.studyspringboot.*",
