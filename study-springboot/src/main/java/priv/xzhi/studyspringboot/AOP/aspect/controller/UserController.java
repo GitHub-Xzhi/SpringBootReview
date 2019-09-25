@@ -31,14 +31,14 @@ public class UserController {
 
     @GetMapping("/vp")
     public User validateAndPrint(Long id, String userName, String note) {
-//        User user = new User();
-//        user.setId(id);
-//        user.setUserName(userName);
-//        user.setNote(note);
+        User user = new User();
+        user.setId(id);
+        user.setUserName(userName);
+        user.setNote(note);
         // 强制转换
         UserValidator userValidator = (UserValidator) userService;
         // 验证用户是否为空
-        User user = null;
+//        User user = null;
         if(userValidator.validate(user)) {
             userService.printUser(user);
         }

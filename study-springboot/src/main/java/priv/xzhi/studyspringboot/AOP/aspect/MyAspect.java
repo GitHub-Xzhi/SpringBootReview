@@ -1,5 +1,6 @@
 package priv.xzhi.studyspringboot.AOP.aspect;
 
+import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.AfterReturning;
@@ -12,6 +13,7 @@ import org.aspectj.lang.annotation.Pointcut;
 
 import priv.xzhi.studyspringboot.AOP.aspect.validator.UserValidator;
 import priv.xzhi.studyspringboot.AOP.aspect.validator.impl.UserValidatorImpl;
+import priv.xzhi.studyspringboot.AOP.bean.User;
 
 /**
  * Desc: 定义切面
@@ -65,5 +67,17 @@ public class MyAspect {
         // 回调目标对象的原有方法
         joinPoint.proceed();
         System.out.println("around after ……");
+	}
+
+	/**
+	 * 通知获取参数：
+	 * 非环绕通知：可以使用一个连接点（JoinPoint）类型的参数，通过它也可以获取参数。
+	 * 环绕通知：可以使用ProceedingJoinPoint类型的参数。
+	 */
+	@Before("pointCut() && args(user)")
+	public void beforeParam(JoinPoint point, User user) {
+		Object[] args = point.getArgs();
+		User arg = (User) args[0];
+		System.out.println("beforeParam …… " + arg.getNote());
 	}
 }
