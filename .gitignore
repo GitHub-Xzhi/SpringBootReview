@@ -143,4 +143,4 @@ fabric.properties
 
 # Editor-based Rest Client
 .idea/httpRequests
-/springboot-security/src/test/
+*/src/test/
