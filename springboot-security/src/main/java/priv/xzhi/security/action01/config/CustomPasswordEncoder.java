@@ -1,4 +1,4 @@
-package priv.xzhi.security.config;
+package priv.xzhi.security.action01.config;
 
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;

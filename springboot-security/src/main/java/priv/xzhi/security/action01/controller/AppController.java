@@ -1,4 +1,4 @@
-package priv.xzhi.security.controller;
+package priv.xzhi.security.action01.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

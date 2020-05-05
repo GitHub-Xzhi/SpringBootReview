@@ -1,4 +1,4 @@
-package priv.xzhi.security.model.entity;
+package priv.xzhi.security.action01.model.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;

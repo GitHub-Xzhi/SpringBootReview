@@ -1,4 +1,4 @@
-package priv.xzhi.security.config;
+package priv.xzhi.security.action01.config;
 
 import com.zaxxer.hikari.HikariDataSource;
 
