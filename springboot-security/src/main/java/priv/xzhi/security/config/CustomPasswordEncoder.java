@@ -1,12 +1,14 @@
 package priv.xzhi.security.config;
 
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Component;
 
 /**
  * @author Xzhi
  * @desc: CustomPasswordEncoder
  * @date 2020-04-30 17:30
  */
+@Component
 public class CustomPasswordEncoder implements PasswordEncoder {
     @Override
     public String encode(CharSequence rawPassword) {

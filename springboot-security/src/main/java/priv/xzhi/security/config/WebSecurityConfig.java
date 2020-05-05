@@ -3,13 +3,9 @@ package priv.xzhi.security.config;
 import com.zaxxer.hikari.HikariDataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.core.userdetails.User;
-import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.provisioning.JdbcUserDetailsManager;
 
 
 /**
@@ -55,6 +51,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
+                // 如果不想要 ROLE_ 前缀，hasRole方法改为调用hasAuthority方法即可
                 .antMatchers("/admin/api/**").hasRole("ADMIN")
                 .antMatchers("/user/api/**").hasRole("USER")
                 .antMatchers("/app/api/**").permitAll()
@@ -98,7 +95,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .roles("USER");
     }*/
 
-    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+    /*protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(userDetailsService())
                 .passwordEncoder(new CustomPasswordEncoder());
     }
@@ -113,6 +110,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
             manager.createUser(User.withUsername("admin").password("123").roles("USER","ADMIN").build());
         }
         return manager;
-    }
+    }*/
 
 }
