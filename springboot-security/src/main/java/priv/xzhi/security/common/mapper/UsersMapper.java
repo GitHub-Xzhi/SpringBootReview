@@ -1,10 +1,10 @@
-package priv.xzhi.security.action01.mapper;
+package priv.xzhi.security.common.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 import org.apache.ibatis.annotations.Param;
 
-import priv.xzhi.security.action01.model.entity.Users;
+import priv.xzhi.security.common.model.entity.Users;
 
 
 /**

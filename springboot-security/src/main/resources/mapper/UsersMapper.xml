@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="priv.xzhi.security.action01.mapper.UsersMapper">
-  <resultMap id="BaseResultMap" type="priv.xzhi.security.action01.model.entity.Users">
+<mapper namespace="priv.xzhi.security.common.mapper.UsersMapper">
+  <resultMap id="BaseResultMap" type="priv.xzhi.security.common.model.entity.Users">
     <!--@mbg.generated-->
     <!--@Table users-->
     <id column="id" jdbcType="BIGINT" property="id" />

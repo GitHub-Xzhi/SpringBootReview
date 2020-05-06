@@ -11,7 +11,7 @@ import org.springframework.context.ConfigurableApplicationContext;
  * @date 2020-4-24 15:14
  */
 @SpringBootApplication(scanBasePackages = "priv.xzhi.security.action02")
-@MapperScan("priv.xzhi.security.action02.mapper")
+@MapperScan("priv.xzhi.security.common.mapper")
 public class Action02Application {
 
 	public static void main(String[] args) {
