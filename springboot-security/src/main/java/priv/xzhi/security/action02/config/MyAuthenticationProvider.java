@@ -16,7 +16,7 @@ import priv.xzhi.security.action02.service.MyUserDetailsService;
  * @desc: MyAuthenticationProvider
  * @date 2020-05-06 14:37
  */
-@Component
+@Component("myAuthenticationProvider")
 public class MyAuthenticationProvider extends AbstractUserDetailsAuthenticationProvider {
 
     @Autowired
