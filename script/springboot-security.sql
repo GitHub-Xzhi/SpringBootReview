@@ -38,3 +38,11 @@ INSERT INTO user_role (user_id, role_id) VALUES (2, 2);
 INSERT INTO role_permission (role_id, permission_id) VALUES (1, 1);
 INSERT INTO role_permission (role_id, permission_id) VALUES (2, 1);
 INSERT INTO role_permission (role_id, permission_id) VALUES (2, 2);
+
+
+CREATE TABLE persistent_logins (
+	username VARCHAR(64) NOT NULL,
+	series VARCHAR(64) PRIMARY KEY,
+	token VARCHAR(64) NOT NULL,
+	last_used TIMESTAMP not NULL
+)
